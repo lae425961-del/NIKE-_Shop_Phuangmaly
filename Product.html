@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - NIKE Shop By Phuangmaly</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 1. ຕັ້ງຄ່າພື້ນຖານ: ຟອນ ແລະ ສີພື້ນຫຼັງ */
+        body {
+            font-family: 'Noto Sans Lao', sans-serif;
+            background-color: #f4f7f6;
+        }
+
+        /* 2. ປັບແຕ່ງເມນູ (Navbar) */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        .navbar-brand img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #ff6b00;
+        }
+        
+
+        /* 3. ປັບແຕ່ງກາດສິນຄ້າ (Product Card) */
+        .product-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%; 
+            display: flex;
+            flex-direction: column; /* ຈັດລຽງເນື້ອໃນຈາກເທິງລົງລຸ່ມ */
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px); /* ໃຫ້ກາດລອຍຂຶ້ນເວລາ Mouse ຊີ້ */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 4. ຈັດການກອບຮູບພາບໃຫ້ເປັນຈະຕຸລັດ (Square) */
+        .img-container {
+            width: 100%;
+            aspect-ratio: 1 / 1; 
+            overflow: hidden;
+            background: #f8f8f8;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ໃຫ້ຮູບພໍດີກອບບໍ່ເປ້ */
+        }
+
+        /* 5. ສ່ວນຂໍ້ມູນສິນຄ້າ ແລະ ປຸ່ມ */
+        .product-info {
+            padding: 15px;
+            flex-grow: 1; /* ໃຫ້ສ່ວນນີ້ຂະຫຍາຍເພື່ອດັນປຸ່ມໃຫ້ຢູ່ລຸ່ມສຸດສະເໝີ */
+        }
+
+        .price-tag {
+            color: #ff6b00;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* ປັບແຕ່ງປຸ່ມສັ່ງຊື້ */
+        .btn-order {
+            background-color: #000; /* ສີດຳແບບ Nike Style */
+            color: white;
+            border-radius: 0 0 15px 15px; /* ໃຫ້ມົນສະເພາະຂອບລຸ່ມ */
+            padding: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .btn-order:hover {
+            background-color: #ff6b00; /* ປ່ຽນເປັນສີສົ້ມເວລາ Hover */
+            color: white;
+        }
+
+        .section-title {
+            margin: 40px 0;
+            text-align: center;
+            font-weight: 700;
+        }
+
+         footer { padding: 40px 0; background: #333; color: white; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./imgs/WhatsApp Image 2024-10-08 at 00.22.05.jpeg" alt="Logo">
+                <span class="ms-2 fw-bold">NIKE SHOP</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">ໜ້າຫຼັກ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Product.html">ສິນຄ້າ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Promotion.html">ສິນຄ້າໂປຣໂມຊັ່ນ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">ການຕິດຕໍ່</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container pb-5">
+        <h2 class="section-title">ລາຍການສິນຄ້າທັງໝົດ</h2>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+            
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-09 at 20.37.57.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">NIKE ຄໍສູງ</h6>
+                        <p class="price-tag mb-1">299,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">Size: 38 - 42</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-09 at 20.37.47.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">Nike VOMELO</h6>
+                        <p class="price-tag mb-1">370,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">Size: 38 - 42</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-09 at 20.37.40.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">NIKE Air Force 1</h6>
+                        <p class="price-tag mb-1">450,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">Size: 38 - 42</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-09 at 20.37.34.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">NIKE Jordan</h6>
+                        <p class="price-tag mb-1">420,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">Size: 38 - 42</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-09 at 20.37.31.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">ເສື້ອວອມ NIKE</h6>
+                        <p class="price-tag mb-1">99,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">ສຳລັບຜູ້ຍິງ</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-09 at 20.37.50.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">ຜ້າຄັດຫົວ NIKE</h6>
+                        <p class="price-tag mb-1">45,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">ສີ: ຂາວ</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-12 at 23.20.33.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">NIKE</h6>
+                        <p class="price-tag mb-1">450,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">ສີ: ຂາວ,ດຳ,ແດງ</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2025-01-03 at 06.53.28.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">NIKE</h6>
+                        <p class="price-tag mb-1">150,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">ສີ: ຂາວ,ດຳ</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-08 at 00.22.05.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">NIKE Jordan</h6>
+                        <p class="price-tag mb-1">2,550,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">ສີ: ຂາວ,ດຳ</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-08 at 00.22.07.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">NIKE Jordan</h6>
+                        <p class="price-tag mb-1">1,550,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">ສີ: ຂາວ,ດຳ</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/11.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">NIKE </h6>
+                        <p class="price-tag mb-1">125,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">ສີ: ດຳ</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card shadow-sm">
+                    <div class="img-container">
+                        <img src="./imgs/WhatsApp Image 2024-10-12 at 23.20.31.jpeg" alt="Nike">
+                    </div>
+                    <div class="product-info text-center">
+                        <h6 class="fw-bold">ເສື້ອ NIKE </h6>
+                        <p class="price-tag mb-1">145,000 ກີບ</p>
+                        <p class="size-info small text-muted mb-0">ສີ:ນ້ຳຕານອ່ອນ</p>
+                    </div>
+                    <a href="https://wa.me/8562056198931" class="btn-order text-center">
+                        <i class="fa-solid fa-cart-shopping me-2"></i>ສັ່ງຊື້
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<footer class="text-center">
+        <div class="container">
+            <p class="mb-2">ຂອບໃຈທີ່ເລືອກໃຊ້ບໍລິການຮ້ານເຮົາ</p>
+            <div class="social-icons mb-3">
+                <i class="fa-brands fa-facebook mx-2"><a href="https://www.facebook.com/share/1BzyYEjLb1/?mibextid=wwXIfr"></a> </i>
+                <i class="fa-brands fa-instagram mx-2"><a href="https://www.instagram.com/phuangmalykeobounma?igsh=OTE0Mzl4YjcwenY4"></a></i>
+                <i class="fa-brands fa-whatsapp mx-2"><a href="https://wa.me/8562056198931"></a></i>
+            </div>
+            <small class="opacity-50">© 2025 NIKE Shop By Phuangmaly</small>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
