@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NIKE Shop By Phuangmaly</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans Lao', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- ປັບແຕ່ງ Style ຂອງໄອຄອນ --- */
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            margin: 0 auto 15px;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* ໃສ່ສີໃຫ້ແຕ່ລະ Brand ເວລາເອົາ Mouse ໄປຊີ້ (Hover) */
+        .fb-icon:hover { background: #1877F2; color: white; transform: translateY(-10px); }
+        .ig-icon:hover { background: #E4405F; color: white; transform: translateY(-10px); }
+        .wa-icon:hover { background: #25D366; color: white; transform: translateY(-10px); }
+        .map-icon:hover { background: #EA4335; color: white; transform: translateY(-10px); }
+
+        .contact-label {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .nav-link { font-weight: 600; color: #333 !important; }
+        .nav-link.active { color: #ff6b00 !important; }
+
+        footer { margin-top: 50px; padding: 30px 0; color: #999; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./imgs/WhatsApp Image 2024-10-08 at 00.22.05.jpeg" alt="Logo" style="width: 45px; border-radius: 50%;">
+                <span class="ms-2 fw-bold">NIKE SHOP</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">ໜ້າຫຼັກ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Product.html">ສິນຄ້າ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Promotion.html">ສິນຄ້າໂປຣໂມຊັ່ນ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Contact.html">ການຕິດຕໍ່</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container contact-section">
+        <div class="contact-card">
+            <h2 class="fw-bold mb-2">ຕິດຕໍ່ພວກເຮົາ</h2>
+            <p class="text-muted mb-5">ເລືອກຊ່ອງທາງທີ່ທ່ານສະດວກເພື່ອສອບຖາມຂໍ້ມູນ</p>
+
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <a href="https://www.facebook.com/share/1BzyYEjLb1/?mibextid=wwXIfr/profile.php?id=100085707186388" target="_blank" class="icon-box fb-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <p class="contact-label">Facebook</p>
+                </div>
+
+
+                <div class="col-6 col-md-3">
+                    <a href="https://wa.me/8562056198931" target="_blank" class="icon-box wa-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <p class="contact-label">WhatsApp</p>
+                </div>
+                    <div class="col-6 col-md-3">
+                    <a href="https://www.instagram.com/phuangmalykeobounma?igsh=OTE0Mzl4YjcwenY4/janthxkhon.o6" target="_blank" class="icon-box ig-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <p class="contact-label">Instagram</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="#" target="_blank" class="icon-box map-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                    <p class="contact-label">Location</p>
+                </div>
+            </div>
+
+            <hr class="my-5 opacity-50">
+
+            <div class="thanks-msg">
+                <i class="fa-solid fa-heart text-danger mb-3" style="font-size: 2rem;"></i>
+                <h4 class="fw-bold text-dark">ຂອບໃຈລູກຄ້າທຸກທ່ານ</h4>
+                <p class="text-muted mb-0">ທີ່ໄວ້ວາງໃຈ ແລະ ສະໜັບສະໜູນຮ້ານເຮົາສະເໝີມາ</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container border-top pt-4">
+            <p class="small mb-0">© 2025 NIKE Shop By Phuangmaly. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
